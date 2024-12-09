@@ -15,6 +15,9 @@ function convertPokeApiDetailToPokemon(pokeDetail){
   pokemon.types = types
   pokemon.type = type
   pokemon.abilities = pokeDetail.abilities.map((abilitySlot) => abilitySlot.ability.name);
+  const hpStat = pokeDetail.stats.find(stat => stat.stat.name === "hp");
+pokemon.hp = hpStat ? hpStat.base_stat : null;
+
   pokemon.photo = pokeDetail.sprites.other.dream_world.front_default
 
   return pokemon
