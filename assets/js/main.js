@@ -13,7 +13,7 @@ return pokemonTypes.map((typeSlot)=>`<li class="type">${typeSlot.type.name}</li>
 
 function convertPokemonToLi(pokemon) {
   return `
-      <li class="pokemon ${pokemon.type}"><span class="number">#${pokemon.number}</span> <span class="name"> ${pokemon.name}</span>
+      <li class="pokemon ${pokemon.type}"><span class="number">#${pokemon.number}</span> <span class="name"> ${pokemon.name}</span>${pokemon.height} ${pokemon.abilities}
             <div class="details">
                 <ol class="types">
   ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
